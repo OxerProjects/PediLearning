@@ -59,8 +59,8 @@ app.get('/logout', (req, res) => {
 
 //Routers Config:
 app.use('/', indexRouter)
-app.use('/students', isAuthenticated, studentsRouter)
-app.use('/cours', isAuthenticated, systemRouter)
+app.use('/students', studentsRouter)
+app.use('/cours', systemRouter)
 
 //Hosting
 app.listen(process.env.PORT || 3000)
